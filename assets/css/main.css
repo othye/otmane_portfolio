@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css?family=Courgette');
+@import url('https://fonts.googleapis.com/css?family=Acme');
+
+*{
+    margin: 0;
+    font-family: 'Acme', sans-serif;
+}
+
+/*  Content */
+
+/*  Header section */
+#home {
+    background-image: url("../img/bg-intro.png");
+    background-attachment: fixed ; 
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: table;
+    position: relative;
+    width: 100%;
+    height:calc(100% - 1px);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+
+.introMessage{
+    margin: auto;
+    height:800px;
+    color: #ffffff;
+}
+
+.roundedImage img{
+    width: 200px;
+    height: auto;
+    filter: grayscale(5);
+}
+
+.bracket{
+    height:400px;
+    padding: 0px 20px;
+}
+
+.hello{
+    font-size: 4vw;
+    padding: 50px 50px;
+    font-family: 'Courgette', cursive;
+
+}
+
+.intro-text{
+    color: #ffffff;
+
+}
+
+/*   ******** ----------------------- About -----------------------  ******** */
+
+.about-me{
+    margin:100px 0;
+    word-spacing: 6px;
+}
+
+.about-h{
+    font-weight: bold;
+}
+
+.about-p{
+    padding: 20px 0;
+    font-weight: 3px;
+}
+
+/*  */
+
+.skills{
+    margin-top: 50px;
+}
+
+.about-skills{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding:20px 0;
+}
+
+.about-skills img{
+    height: 100px;
+}
+
+.dev-intro{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+/* skills image hover */
+.grid {
+	padding: 20px 20px 50px 20px;
+	margin: 0 auto;
+	list-style: none;
+	text-align: center;
+}
+
+.grid li {
+	display: inline-block;
+	width: 300px;
+	margin: 0;
+	padding: 20px;
+	text-align: left;
+	position: relative;
+}
+
+.grid figure {
+	margin: 0;
+	position: relative;
+}
+
+.grid figure img {
+	max-width: 100%;
+	display: block;
+	position: relative;
+}
+
+.grid figcaption {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 20px;
+    background: rgba(10, 45, 66, 0.644);;
+	color: #ed4e6e;
+}
+
+.grid figcaption h5 {
+	margin: 0;
+	padding: 0;
+	color: #fff;
+}
+
+
+.grid figcaption a {
+	text-align: center;
+	padding: 5px 10px;
+	border-radius: 2px;
+	display: inline-block;
+	background: #ed4e6e;
+	color: #fff;
+}
+
+
+.cv figcaption {
+	height: 100%;
+	width: 250px;
+	opacity: 0;
+	text-align: center;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.3s;
+	transition: transform 0.3s, opacity 0.3s;
+}
+
+.no-touch .cv figure:hover figcaption,
+.cv figure.cs-hover figcaption {
+	opacity: 1;
+	-webkit-transform: translate(15px, 15px);
+	-moz-transform: translate(15px, 15px);
+	-ms-transform: translate(15px, 15px);
+	transform: translate(15px, 15px);
+}
+
+.cv figcaption h5 {
+    margin-top: 45px;
+    font-size: 25px;
+}
+
+.cv figcaption span {
+	display: block;
+}
+
+.cv figcaption a {
+	margin-top: 20px;
+}
+
+/* POPUPS  */
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 60%;
+    height : 80%;
+    position: relative;
+    transition: all 5s ease-in-out;
+  }
+  
+  .popup h2 {
+    margin-top: 0;
+    color: #333;
+  }
+  .popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+  .popup .close:hover {
+    color: #06D85F;
+  }
+  .popup .content {
+    max-height: 70%;
+    overflow: auto;
+  }
+  
+/*-----------------------------************ Portfolio ************------------------------*/
+#portfolio{
+    background-image: url("../img/bg-port.jpg");
+    background-attachment: fixed ; 
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: table;
+    position: relative;
+    width: 100%;
+    height:calc(100% - 1px);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+.port{
+    margin-top: 30px;    
+}
+
+.list-port {
+	padding: 20px 20px 50px 20px;
+	margin: 0 auto;
+	list-style: none;
+    text-align: center;
+    word-spacing: 6px;
+}
+
+.list-port li {
+	display: inline-block;
+	width: 400px;
+	margin: 0;
+	padding: 20px;
+	text-align: left;
+	position: relative;
+}
+
+.list-port figure {
+	margin: 0;
+	position: relative;
+}
+
+.list-port figure img {
+    max-width: 100%;
+	display: block;
+	position: relative;
+}
+
+.list-port figcaption {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 20px;
+	background: #0b8b94;
+	color: #05212c;
+}
+
+.list-port figcaption h5 {
+	margin: 0;
+	padding: 0;
+	color: #fff;
+}
+
+
+.list-port figcaption a {
+	text-align: center;
+	padding: 5px 10px;
+	border-radius: 2px;
+	display: inline-block;
+	background: #05413c;
+    color: #fff;
+    text-decoration: none;
+}
+
+.cs-style-6 figure img {
+	z-index: 10;
+	-webkit-transition: -webkit-transform 0.5s;
+	-moz-transition: -moz-transform 0.5s;
+	transition: transform 0.5s;
+}
+
+.no-touch .cs-style-6 figure:hover img,
+.cs-style-6 figure.cs-hover img {
+	-webkit-transform: translateY(-60px) scale(0.5);
+	-moz-transform: translateY(-60px) scale(0.5);
+	-ms-transform: translateY(-60px) scale(0.5);
+	transform: translateY(-60px) scale(0.5);
+}
+
+.cs-style-6 figcaption {
+	height: 100%;
+	width: 100%;
+}
+
+.cs-style-6 figcaption h3 {
+    margin-top: 55%;
+    color: #fff
+}
+
+.cs-style-6 figcaption a {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+}
+
+
+/* ****************** Contact **************************** */
+
+
+
+
+/* ------------------------------ Responsive ----------------------------------  */ 
+@media screen and (max-width: 992px) {
+    #home {
+        background-image: url("../img/bg-mobile.png") ;
+        filter: none;
+        width: 100%;
+    }
+    .introMessage{
+        height:400px;
+    }
+
+    .roundedImage img{
+        width: 100px;
+    }
+    
+    .bracket{
+        height:200px;
+        
+    }
+    .hello{
+        font-size: 4vw;
+        padding: 25px 25px;
+    }
+    
+    .grid li {
+        width: 200px;
+        
+    }
+
+    .cv figcaption {
+        width: 150px;
+    }
+
+}

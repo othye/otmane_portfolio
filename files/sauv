@@ -1,0 +1,45 @@
+
+ <article class="skills">
+
+                        <h3 class="text-center">Dev Skills</h3>
+                        
+                        <div class="text-center about-skills"> 
+                            <div class="intro-skill">
+                                <img src="assets/img/desgni-icon.png" alt="" >
+                                <h4>Design</h4>
+                                <p>Photoshop - Illustrator</p>
+                            </div>
+                            <div class="intro-skill">
+                                <img src="assets/img/frontend-icon.png" alt="" >
+                                <h4>Front-end</h4>
+                                <p>HTML5 - CSS - JavaScript</p>             
+                            </div>
+                            <div class="intro-skill">
+                                <img src="assets/img/backend-icon.png" alt=""  >
+                                <h4>Back-end</h4>
+                                <p>PHP - MySQL - APACHE</p>             
+                            </div>
+                        </div>
+
+                        <section class="skills-description">
+                            <div class="dev-intro">
+                                <p>< HTML/>: The BACK-BONE of every Website on the Worls Wide Web</p>
+                                <p>{ CSS }: Wthout CSS the web would be a very ugly place</p>
+                            </div >
+                            <div class="dev-intro">
+                                <p>JavaScript: Complexe code to create immersive and riche experiences</p>
+                                <p> < ?PHP>: For creating dynamic and easy to update Website</p>
+                            </div><br>
+                            <div class="dev-intro">
+                                <p>Framework CSS: bootstrap, Materialize, Foundation</p>
+                                <P>Conception: Merise  </P>
+                                <p>Git, MVC , WordPress </p>
+                            </div>
+                        </section>
+
+                        <section>
+
+
+                        </section>
+
+                    </article>

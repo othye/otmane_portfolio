@@ -1,0 +1,314 @@
+
+nav{
+    font-family: 'Acme', sans-serif;
+}
+
+img {
+    vertical-align: baseline;
+}
+/*--------------------------------------------------------------
+# Helper Utilities
+--------------------------------------------------------------*/
+.flex {
+    display: flex;
+}
+
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+/*
+# Logo
+--------------------------------*/
+.oLogo {
+    transition: all .5s;
+}
+
+.o-title {
+    margin: 0;
+    text-align: center;
+}
+
+.navBar .o-title a {
+    display: block;
+}
+
+/*
+  Responsive Menu
+----------------------------------------*/
+.menu-mobile .menu-icon,
+.menu-mobile .menu-close-icon {
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.menu-mobile.close .menu-icon {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.menu-close-icon {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.menu-mobile.close .menu-close-icon {
+    visibility: visible;
+    opacity: 1;
+}
+
+.menu-mobile img {
+    display: block;
+    margin: 0 auto;
+}
+
+.menu-toggle {
+    transition: 0.70s;
+    -webkit-transition: 0.70s;
+    -moz-transition: 0.70s;
+    -ms-transition: 0.70s;
+    -o-transition: 0.70s;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.menu-toggle:hover {
+    transition: 0.70s;
+    -webkit-transition: 0.70s;
+    -moz-transition: 0.70s;
+    -ms-transition: 0.70s;
+    -o-transition: 0.70s;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+} 
+
+/*
+# Nav-Bar
+--------------------------------*/
+.navBar{
+    transition: all .5s;
+}
+
+/*
+#  Menu
+--------------------------------*/
+.main-menu {
+    padding: 15px 30px;
+    margin: 0;
+}
+
+.main-menu li {
+    display: block;
+    padding: 12px 0;
+    font-size: 30px;
+    font-weight: 500;
+    border-bottom: 1px solid #ebebeb;
+    
+}
+
+.main-menu li:nth-last-of-type(1) {
+    border-bottom: 0;
+}
+
+.main-menu li a {
+    display: block;
+    color: #a6a6a6;
+    text-decoration: none;
+    transition: all 0.35s;
+}
+
+.main-menu li a:hover,
+.main-menu li.current-menu-item a {
+    color: #080808;
+}
+
+/*
+# Social
+--------------------------------*/
+.social ul {
+    padding: 10px 0 34px 0;
+    margin: 0;
+}
+
+.social ul li {
+    display: block;
+    padding: 0 18px;
+    font-size: 1.5rem;
+}
+
+.social ul li a {
+    color: #080808;
+    transition: all 0.35s;
+}
+
+.social ul li a:hover {
+    color: #f0437e;
+}
+
+.nav-bar-sep {
+    height: 78px;
+}
+
+
+@media screen and (max-width: 992px) {
+    .outer-container {
+        padding-left: 80px;
+    }
+
+    .oHeader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        width: 100%;
+        padding: 15px 30px;
+        background: #fff;
+        box-shadow: 0 12px 24px rgba(0,0,0,.09);
+        
+    }
+
+    .oHeader,
+    .menu-mobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu-mobile {
+        flex-flow: column;
+    }
+
+    .menu-mobile .menu-icon, .menu-mobile .menu-close-icon {
+        position: absolute;
+        top: 26px;
+        right: 24px;
+    }
+
+    .main-menu li {
+        position: relative;
+    }
+
+    .main-menu li::after {
+        content: '';
+        position: absolute;
+        top: 11px;
+        right: 0;
+        font-family: 'FontAwesome', serif;
+    }
+
+    .main-menu li:hover::after,
+    .main-menu li.current-menu-item::after {
+        color: #f0437e;
+    }
+
+    .navBar {
+        position: absolute;
+        top: 78px;
+        left: 0;
+        z-index: 99;
+        width: 100%;
+        height: 500px;
+        background: #fff;
+        box-shadow: 0 12px 24px rgba(0,0,0,.09);
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.35s;
+    }
+
+    .navBar.show {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .social ul {
+        padding: 80px 15px 30px;
+        margin: 0;
+    }
+
+    
+}
+
+@media screen and (min-width: 992px) {
+    .oHeader,
+    .navBar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        width: 60px;
+        height: 100vh;
+        padding: 0 0px;
+        box-shadow: 6px 0 12px rgba(0,0,0,.05);
+    }
+
+    
+    .navBar {
+        background: #f7f7f7;
+        opacity: 0.9;
+    }
+
+    .navBar.show {
+        left: 60px;
+    }
+
+    .oHeader {
+        background: #ffffff; 
+        opacity: 0.9; 
+    }
+
+    .oHeader.no-shadow {
+        box-shadow: none;
+    }
+
+    .oHeader .oLogo.hide {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .o-title {
+        padding: 28px 0 10px 0;
+    }
+
+    .menu-mobile .menu-icon,
+    .menu-mobile .menu-close-icon {
+        position: absolute;
+        top: calc(50vh - 22px);
+        left: 15px;
+        width: calc(100% - 30px);
+        padding: 10px 0;
+    }
+
+    .navBar {
+        left: -250px;
+        z-index: 99;
+        width: 250px;
+        padding: 0;
+        box-shadow: 16px 0 42px rgba(0,0,0,.09);
+    }
+
+    .main-menu {
+        height: calc(100vh - 160px);
+        padding: 0;
+    }
+
+    .main-menu li {
+        border-bottom: 0;
+        text-align: center;
+    }
+
+    .social ul li {
+        font-size: 1.125rem;
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    
+}

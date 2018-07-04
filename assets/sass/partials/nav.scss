@@ -1,0 +1,275 @@
+
+//@extend-elements
+//original selectors
+//.menu-mobile .menu-icon, .menu-mobile .menu-close-icon
+%extend_1 {
+	width: 44px;
+	height: 44px;
+	text-align: center;
+	cursor: pointer;
+	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+	transition: all 0.5s;
+}
+
+
+nav {
+	font-family: $font_2, $font_3;
+}
+img {
+	vertical-align: baseline;
+}
+.flex {
+	display: flex;
+}
+.oLogo {
+	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+	transition: all .5s;
+}
+.o-title {
+	margin: 0;
+	text-align: center;
+}
+.navBar {
+	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+	transition: all .5s;
+	.o-title a {
+		display: block;
+	}
+}
+.menu-mobile {
+	.menu-icon {
+		@extend %extend_1;
+	}
+	.menu-close-icon {
+		@extend %extend_1;
+	}
+	&.close {
+		.menu-icon {
+			visibility: hidden;
+			opacity: 0;
+		}
+		.menu-close-icon {
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+	img {
+		display: block;
+		margin: 0 auto;
+	}
+}
+.menu-close-icon {
+	visibility: hidden;
+	opacity: 0;
+}
+.menu-toggle {
+	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+	transition: 0.70s;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	&:hover {
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: 0.70s;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: rotate(180deg);
+	}
+}
+.main-menu {
+	padding: 15px 30px;
+	margin: 0;
+	li {
+		display: block;
+		padding: 12px 0;
+		font-size: 30px;
+		font-weight: 500;
+		border-bottom: 1px solid $color_cararra_approx;
+		&:nth-last-of-type(1) {
+			border-bottom: 0;
+		}
+		a {
+			display: block;
+			color: $color_shady_lady_approx;
+			text-decoration: none;
+			//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+			transition: all 0.35s;
+			&:hover {
+				color: $color_cod_gray_approx;
+			}
+		}
+		&.current-menu-item a {
+			color: $color_cod_gray_approx;
+		}
+	}
+}
+.nav-bar-sep {
+	height: 78px;
+}
+@media screen and(max-width: 992px) {
+	.outer-container {
+		padding-left: 80px;
+	}
+	.oHeader {
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 999;
+		width: 100%;
+		padding: 15px 30px;
+		background: $white;
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 12px 24px $black;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.menu-mobile {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-flow: column;
+		.menu-icon {
+			position: absolute;
+			top: 26px;
+			right: 24px;
+		}
+		.menu-close-icon {
+			position: absolute;
+			top: 26px;
+			right: 24px;
+		}
+	}
+	.main-menu {
+		li {
+			position: relative;
+			&:hover::after {
+				color: $color_violet_red_approx;
+			}
+			&.current-menu-item::after {
+				color: $color_violet_red_approx;
+			}
+		}
+		li::after {
+			content: '';
+			position: absolute;
+			top: 11px;
+			right: 0;
+			font-family: $font_0, $font_1;
+		}
+	}
+	.navBar {
+		position: absolute;
+		top: 78px;
+		left: 0;
+		z-index: 99;
+		width: 100%;
+		height: 500px;
+		background: $white;
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 12px 24px $black;
+		visibility: hidden;
+		opacity: 0;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: all 0.35s;
+		&.show {
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+	.social ul {
+		padding: 80px 15px 30px;
+		margin: 0;
+	}
+}
+@media screen and(min-width: 992px) {
+	.oHeader {
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 999;
+		width: 60px;
+		height: 100vh;
+		padding: 0;
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 6px 0 12px $black;
+		background: $white;
+		opacity: 0.9;
+		&.no-shadow {
+			//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			box-shadow: none;
+		}
+		.oLogo.hide {
+			visibility: hidden;
+			opacity: 0;
+		}
+	}
+	.navBar {
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 999;
+		width: 60px;
+		height: 100vh;
+		padding: 0;
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 6px 0 12px $black;
+		background: $color_black_haze_approx;
+		opacity: 0.9;
+		left: -250px;
+		z-index: 99;
+		width: 250px;
+		padding: 0;
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 16px 0 42px $black;
+		&.show {
+			left: 60px;
+		}
+	}
+	.o-title {
+		padding: 28px 0 10px;
+	}
+	.menu-mobile {
+		.menu-icon {
+			position: absolute;
+			top: calc(50vh - 22px);
+			left: 15px;
+			width: calc(100% - 30px);
+			padding: 10px 0;
+		}
+		.menu-close-icon {
+			position: absolute;
+			top: calc(50vh - 22px);
+			left: 15px;
+			width: calc(100% - 30px);
+			padding: 10px 0;
+		}
+	}
+	.main-menu {
+		height: calc(100vh - 160px);
+		padding: 0;
+		li {
+			border-bottom: 0;
+			text-align: center;
+		}
+	}
+	.social ul li {
+		font-size: 1.125rem;
+	}
+}
+.social ul {
+	padding: 10px 0 34px;
+	margin: 0;
+	li {
+		display: block;
+		padding: 0 18px;
+		font-size: 1.5rem;
+		a {
+			color: $color_cod_gray_approx;
+			//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+			transition: all 0.35s;
+			&:hover {
+				color: $color_violet_red_approx;
+			}
+		}
+	}
+}
