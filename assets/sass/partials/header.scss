@@ -1,0 +1,38 @@
+*{
+	margin : 0;
+	font-family: $font_2;
+}
+
+#home {
+	background-image: $urlHeader;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	display: table;
+	position: relative;
+	width: 100%;
+
+}
+.introMessage {
+	margin: auto;
+	height: 800px;
+	color: $white;
+}
+.bracket {
+	height: 400px;
+	padding: 0 20px;
+}
+.hello {
+	font-size: 4vw;
+	padding: 50px;
+	font-family: $font_4;
+}
+.intro-text {
+	color: $white;
+}
+.roundedImage img {
+	width: 200px;
+	height: auto;
+	filter: grayscale(5);
+}

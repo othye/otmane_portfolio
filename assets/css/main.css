@@ -163,7 +163,7 @@
 }
 
 .no-touch .cv figure:hover figcaption,
-.cv figure.cs-hover figcaption {
+.cv figure.cs:hover figcaption {
 	opacity: 1;
 	-webkit-transform: translate(15px, 15px);
 	-moz-transform: translate(15px, 15px);

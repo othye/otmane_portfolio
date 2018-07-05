@@ -1,0 +1,152 @@
+.about-me {
+	margin: 100px 0;
+	word-spacing: 6px;
+}
+.about-h {
+	font-weight: bold;
+}
+.about-p {
+	padding: 20px 0;
+	font-weight: 3px;
+}
+.skills {
+	margin-top: 50px;
+}
+.about-skills {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 20px 0;
+	img {
+		height: 100px;
+	}
+}
+.dev-intro {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.grid {
+	padding: 20px 20px 50px 20px;
+	margin: 0 auto;
+	list-style: none;
+	text-align: center;
+	li {
+		display: inline-block;
+		width: 300px;
+		margin: 0;
+		padding: 20px;
+		text-align: left;
+		position: relative;
+	}
+	figure {
+		margin: 0;
+		position: relative;
+		img {
+			max-width: 100%;
+			display: block;
+			position: relative;
+		}
+	}
+	figcaption {
+		position: absolute;
+		top: 0;
+		left: 0;
+		padding: 20px;
+		background: $color_blue_whale_64;
+		color: $color_mandy_approx;
+		h5 {
+			margin: 0;
+			padding: 0;
+			color: $white;
+		}
+		a {
+			text-align: center;
+			padding: 5px 10px;
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 2px;
+			display: inline-block;
+			background: $color_mandy_approx;
+			color: $white;
+		}
+	}
+}
+.cv {
+	figcaption {
+		height: 100%;
+		width: 250px;
+		opacity: 0;
+		text-align: center;
+		//Instead of the line below you could use @include backface-visibility($visibility)
+		backface-visibility: hidden;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: transform 0.3s, opacity 0.3s;
+		h5 {
+			margin-top: 45px;
+			font-size: 25px;
+		}
+		span {
+			display: block;
+		}
+		a {
+			margin-top: 20px;
+		}
+    }
+    .no-touch .cv figure:hover figcaption, .cv figure.cs:hover figcaption {
+        opacity: 1;
+        -webkit-transform: translate(15px, 15px);
+        -moz-transform: translate(15px, 15px);
+        -ms-transform: translate(15px, 15px);
+        transform: translate(15px, 15px);
+    }
+}
+.overlay {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: $black_70;
+	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+	transition: opacity 500ms;
+	visibility: hidden;
+	opacity: 0;
+	&:target {
+		visibility: visible;
+		opacity: 1;
+	}
+}
+.popup {
+	margin: 70px auto;
+	padding: 20px;
+	background: $white;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 5px;
+	width: 60%;
+	height: 80%;
+	position: relative;
+	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+	transition: all 5s ease-in-out;
+	h2 {
+		margin-top: 0;
+		color: $color_mine_shaft_approx;
+	}
+	.close {
+		position: absolute;
+		top: 20px;
+		right: 30px;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: all 200ms;
+		font-size: 30px;
+		font-weight: bold;
+		text-decoration: none;
+		color: $color_mine_shaft_approx;
+		&:hover {
+			color: $color_malachite_approx;
+		}
+	}
+	.content {
+		max-height: 70%;
+		overflow: auto;
+	}
+}

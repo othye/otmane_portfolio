@@ -1,5 +1,5 @@
 require('../sass/main.scss');
-//require('../lib/modernizr.js');
+require('../js/modernizr-custom');
 
 (function($) {
     'use strict';
@@ -10,7 +10,8 @@ require('../sass/main.scss');
         $('.navBar').toggleClass('show');
         $('.oHeader').toggleClass('no-shadow');
     });
-
+	console.log('hello');
+	
 })(jQuery);
 
 
@@ -19,7 +20,7 @@ jQuery(document).ready(function($){
 	function fullHome(){
 		jQuery('#home').css({
 			width: jQuery(window).width(),
-			height: jQuery(window).height()
+			height: jQuery(window).height(),
 		});
 	}
 	fullHome();
