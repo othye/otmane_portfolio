@@ -1,3 +1,6 @@
+//about me 
+
+
 .about-me {
 	margin: 100px 0;
 	word-spacing: 6px;
@@ -5,14 +8,20 @@
 .about-h {
 	font-weight: bold;
 }
+
 .about-p {
 	padding: 20px 0;
 	font-weight: 3px;
+	
+	.about-text{
+		text-align: center;
+	}
 }
 .skills {
 	margin-top: 50px;
 }
-.about-skills {
+
+.about-skills{
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
@@ -26,6 +35,9 @@
 	justify-content: space-around;
 	align-items: center;
 }
+
+
+ // Skills
 .grid {
 	padding: 20px 20px 50px 20px;
 	margin: 0 auto;
@@ -39,67 +51,111 @@
 		text-align: left;
 		position: relative;
 	}
-	figure {
-		margin: 0;
-		position: relative;
-		img {
-			max-width: 100%;
-			display: block;
-			position: relative;
-		}
+}
+
+figure.mySkills {
+	color: $white;
+	position: relative;
+	float: left;
+	overflow: hidden;
+	max-width: 250px;
+	width: 100%;
+	max-height: 250px;
+	background: #000000;
+	text-align: center;
+	img {
+		opacity: 1;
+		width: 100%;
+		height: auto;
+		-webkit-transition: opacity 0.35s;
+		transition: opacity 0.35s;
 	}
 	figcaption {
 		position: absolute;
-		top: 0;
+		bottom: 0;
 		left: 0;
-		padding: 20px;
-		background: $color_blue_whale_64;
-		color: $color_mandy_approx;
-		h5 {
-			margin: 0;
-			padding: 0;
-			color: $white;
+		width: 100%;
+		height: 100%;
+		&::before {
+			position: absolute;
+			top: 50%;
+			right: 30px;
+			bottom: 50%;
+			left: 30px;
+			border-top: 1px solid $white_80;
+			border-bottom: 1px solid $white_80;
+			content: '';
+			opacity: 0;
+			background-color: $white;
+			-webkit-transition: all 0.4s;
+			transition: all 0.4s;
+			-webkit-transition-delay: 0.6s;
+			transition-delay: 0.6s;
 		}
-		a {
-			text-align: center;
-			padding: 5px 10px;
-			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
-			border-radius: 2px;
-			display: inline-block;
-			background: $color_mandy_approx;
-			color: $white;
+	}
+	h2{
+		margin-top: 90px;
+		opacity: 0;
+		-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+		transition: opacity 0.35s,-webkit-transform 0.35s,-moz-transform 0.35s,-o-transform 0.35s,transform 0.35s;
+		//word-spacing: -0.15em;
+		font-weight: 300;
+		text-transform: uppercase;
+		-webkit-transform: translate3d(0%, 50%, 0);
+		transform: translate3d(0%, 50%, 0);
+		-webkit-transition-delay: 0.3s;
+		transition-delay: 0.3s;
+		font-size: 25px;
+	}
+	p{
+		margin: 0 0 5px;
+		opacity: 0;
+		-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+		transition: opacity 0.35s,-webkit-transform 0.35s,-moz-transform 0.35s,-o-transform 0.35s,transform 0.35s;
+		font-weight: 200;
+		-webkit-transition-delay: 0s;
+		transition-delay: 0s;
+	}
+	
+	a {
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		position: absolute;
+		color: $white;
+	}
+	&:hover {
+		img {
+			opacity: 0.35;
+		}
+		figcaption {
+			h2 {
+				opacity: 1;
+				-webkit-transform: translate3d(0%, 0%, 0);
+				transform: translate3d(0%, 0%, 0);
+				-webkit-transition-delay: 0.3s;
+				transition-delay: 0.3s;
+			}
+			p{
+				opacity: 0.9;
+				-webkit-transition-delay: 0.6s;
+				transition-delay: 0.6s;
+			}
+			&::before {
+				background: $transWhite;
+				top: 30px;
+				bottom: 30px;
+				opacity: 1;
+				-webkit-transition-delay: 0s;
+				transition-delay: 0s;
+			}
 		}
 	}
 }
-.cv {
-	figcaption {
-		height: 100%;
-		width: 250px;
-		opacity: 0;
-		text-align: center;
-		//Instead of the line below you could use @include backface-visibility($visibility)
-		backface-visibility: hidden;
-		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
-		transition: transform 0.3s, opacity 0.3s;
-		h5 {
-			margin-top: 45px;
-			font-size: 25px;
-		}
-		span {
-			display: block;
-		}
-		a {
-			margin-top: 20px;
-		}
-    }
-    .no-touch .cv figure:hover figcaption, .cv figure.cs:hover figcaption {
-        opacity: 1;
-        -webkit-transform: translate(15px, 15px);
-        -moz-transform: translate(15px, 15px);
-        -ms-transform: translate(15px, 15px);
-        transform: translate(15px, 15px);
-    }
-}
+
+
+//POPUP
 .overlay {
 	position: fixed;
 	top: 0;
@@ -107,7 +163,6 @@
 	left: 0;
 	right: 0;
 	background: $black_70;
-	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
 	transition: opacity 500ms;
 	visibility: hidden;
 	opacity: 0;
@@ -120,33 +175,131 @@
 	margin: 70px auto;
 	padding: 20px;
 	background: $white;
-	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
 	border-radius: 5px;
 	width: 60%;
-	height: 80%;
+	height: 90%;
 	position: relative;
-	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
 	transition: all 5s ease-in-out;
 	h2 {
 		margin-top: 0;
-		color: $color_mine_shaft_approx;
+		color: $grey1;
 	}
 	.close {
 		position: absolute;
 		top: 20px;
 		right: 30px;
-		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
 		transition: all 200ms;
 		font-size: 30px;
 		font-weight: bold;
 		text-decoration: none;
-		color: $color_mine_shaft_approx;
+		color: $grey1;
 		&:hover {
-			color: $color_malachite_approx;
+			color: $green;
 		}
 	}
-	.content {
-		max-height: 70%;
+	.contents {
+		max-height: 90%;
 		overflow: auto;
+	}
+}
+
+
+//media 
+@media screen and (max-width: 992px) {
+
+	.about-h {
+		font-size: 6vw;
+	}
+	
+	.about-p {
+		padding: 20px 0;
+		font-weight: 3px;
+		font-size: 4.5vw;
+		.about-text{
+			text-align: left;
+		}
+	}
+
+	.grid {
+		li {
+			width: 200px;
+		}
+	}
+	
+	figure.mySkills {
+		max-width: 150px;
+		width: 100%;
+		max-height: 150px;
+	
+		h2{
+			margin-top: 45px;
+			font-weight: 150;
+			font-size: 15px;
+		}
+	}
+
+	.popup {
+		width: 100%;
+		height: 90%;
+	}
+	.contents {
+		max-height: 95%;
+	}
+
+	.intro-skill {
+		margin: 10px;
+	}
+	
+	.about-skills {
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+		img{
+			height: 70px;
+		}
+
+		h4{
+			font-size: 25px;
+		}
+
+		p{
+			font-size: 20px;
+		}
+	}
+	table{
+		thead{
+			font-size: 25px;
+		}
+		tbody{
+			font-size: 20px;
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.about-skills {
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+		img{
+			height: 50px;
+		}
+
+		h4{
+			font-size: 15px;
+		}
+
+		p{
+			font-size: 10px;
+		}
+	}
+	
+	table{
+		thead{
+			font-size: 15px;
+		}
+		tbody{
+			font-size: 10px;
+		}
 	}
 }

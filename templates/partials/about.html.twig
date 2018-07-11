@@ -1,13 +1,16 @@
  <section class="container">
 
-    <section class="about-me">  
+    <section class="about-me ">  
+    
+        <!-- About me -->
         <article  class="about" id="about">
             <div class="about-h">
                 <h3 class="text-center about-title">HI THERE !</h3>
             </div>
             <div class="about-p">
-                <p class="text-center abaout-text">I'm developper Front-end / Back-end</p>
-                <p class="text-center abaout-text">I have a strong passion for anything Web related, mostly developping web applications. Equally enjoy working in the back-end and the front-end. You can Know more about me on scrolling my website</p>
+                
+                <p class="about-text">I have a strong passion for anything Web related, mostly developping web applications. Equally enjoy working in the back-end and the front-end. Keep scrolling if you want to see more! </p>
+                <!--<p> I'm a creative person, I enjoy being part of a team and i feel conforyable both making decisions and following directions, </p>-->
                 <p>balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla</p>
             </div>
 
@@ -15,45 +18,51 @@
 
         <!--     Skills    -->
         <section class="skills">
-            <ul class="grid cv">
+        
+
+            <ul class="grid">
                 <li>
-                    <figure>
+                    <figure class="mySkills">
                         <img src="{{ asset('img/skills.png') }}" alt="skills">
                         <figcaption>
-                            <h5>Skills</h5>
-                            <a href="#popup1">Take a look</a>
-                        </figcaption>
+                            <h2>Skills</h2>
+                            <p>Take a look </p>
+                            <a href="#popup1"></a>
+                        </figcaption>			
                     </figure>
                 </li>
                 <li>
-                    <figure>
+                    <figure class="mySkills">
                         <img src="{{ asset('img/experiences.png') }}" alt="experiences">
                         <figcaption>
-                            <h5>Experiences</h5>                                        
-                            <a href="#popup2">Take a look</a>
+                            <h2>Experiences</h2>  
+                            <p>Take a look </p>                                      
+                            <a href="#popup2"></a>
                         </figcaption>
                     </figure>
                 </li>
                 <li>
-                    <figure>
-                        <img src="{{ asset('img/studies.png') }}" alt="studing">
+                    <figure class="mySkills">
+                        <img src="{{ asset('img/studies.png') }}" alt="studies">
                         <figcaption>
-                            <h5>Studing</h5>                                        
-                            <a href="#popup3">Take a look</a>
+                            <h2>Studing</h2>      
+                            <p>Take a look </p>                                  
+                            <a href="#popup3"></a>
                         </figcaption>
                     </figure>
                 </li>
             </ul>
+
 
             <!-- Popups-->
             <div id="popup1" class="overlay">
                 <div class="popup">
                     <h2>Skills</h2>
                     <a class="close" href="#about">&times;</a>
-                    <section class="content">
-                        Thank to pop me out of that button, but now i'm done so you can close this window.
+                    <section class="contents">
+                       
                         <div class="text-center about-skills"> 
-                            <div class="intro-skill">
+                            <div class="intro-skill ">
                                 <img src="{{ asset('img/desgni-icon.png') }}" alt="" >
                                 <h4>Design</h4>
                                 <p>Photoshop - Illustrator</p>
@@ -69,24 +78,90 @@
                                 <p>PHP - MySQL - APACHE</p>             
                             </div>
                         </div>
+                        <div>
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                    <th scope="col">Title</th>
+                                    <th scope="col">Skills</th>
+                                    </tr>
+                                </thead>
+                                <tbody> 
+                                    
+                                    {% for skill in skills %}  
+                                        <tr class="table-light ">
+                                            <th scope="row">{{ skill.title }}</th>
+                                            <td>{{ skill.skills}}</td>
+                                        </tr>
+                                    {% endfor %}
+                                    
+                              </tbody>
+                            </table> 
+                        </div>
                     </section>
                 </div>
             </div>
+
             <div id="popup2" class="overlay">
                 <div class="popup">
                     <h2>Experiences</h2>
                     <a class="close" href="#about">&times;</a>
                     <div class="content">
-                        Thank to pop me out of that button, but now i'm done so you can close this window.
+                        <div>
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                    <th scope="col">Title</th>
+                                    <th scope="col">Company</th>
+                                    <th scope="col">Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody> 
+                                    
+                                    {% for experience in experiences %}  
+                                        <tr class="table-light ">
+                                            <th scope="row">{{ experience.title }}</th>
+                                            <td>{{ experience.company}}</td>
+                                            <td>{{ experience.dateStart}} - {{ experience.dateFinish}}</td>
+                                        </tr>
+                                    {% endfor %}
+                                    
+                              </tbody>
+                            </table> 
+                        </div>
                     </div>
                 </div>
             </div>
+
             <div id="popup3" class="overlay">
                 <div class="popup">
                     <h2>Studing</h2>
                     <a class="close" href="#about">&times;</a>
                     <div class="content">
-                        Thank to pop me out of that button, but now i'm done so you can close this window.
+                        <div>
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Title</th>
+                                        <th scope="col">School</th>
+                                        <th scope="col">Year</th>
+                                        <th scope="col">Country</th>
+                                    </tr>
+                                </thead>
+                                <tbody> 
+                                    
+                                    {% for study in studies %}  
+                                        <tr class="table-light ">
+                                            <th scope="row">{{ study.title }}</th>
+                                            <td>{{ study.school}}</td>
+                                            <td>{{ study.year}}</td>
+                                            <td>{{ study.country}}</td>
+                                        </tr>
+                                    {% endfor %}
+                                    
+                              </tbody>
+                            </table> 
+                        </div>
                     </div>
                 </div>
             </div>

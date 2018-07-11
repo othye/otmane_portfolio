@@ -1,0 +1,99 @@
+#portfolio {
+    background-image: url("../img/bg-port.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: table;
+    position: relative;
+    width: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+  
+  .port {
+    margin-top: 30px;
+  }
+  
+  .list-port {
+    padding: 20px 20px 50px 20px;
+    margin: 0 auto;
+    list-style: none;
+    text-align: center;
+    word-spacing: 6px;
+    li {
+      display: inline-block;
+      width: 400px;
+      margin: 0;
+      padding: 20px;
+      text-align: left;
+      position: relative;
+    }
+    figure {
+      margin: 0;
+      position: relative;
+      img {
+        max-width: 100%;
+        display: block;
+        position: relative;
+      }
+    }
+    figcaption {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 20px;
+      background: #0b8b94;
+      color: #05212c;
+      h5 {
+        margin: 0;
+        padding: 0;
+        color: $white;
+      }
+      a {
+        text-align: center;
+        padding: 5px 10px;
+        border-radius: 2px;
+        display: inline-block;
+        background: #05413c;
+        color: $white;
+        text-decoration: none;
+      }
+    }
+  }
+  
+  .cs-style-6 figure img {
+    z-index: 10;
+    -webkit-transition: -webkit-transform 0.5s;
+    -moz-transition: -moz-transform 0.5s;
+    transition: transform 0.5s;
+  }
+  
+  .no-touch .cs-style-6 figure:hover img {
+    -webkit-transform: translateY(-60px) scale(0.5);
+    -moz-transform: translateY(-60px) scale(0.5);
+    -ms-transform: translateY(-60px) scale(0.5);
+    transform: translateY(-60px) scale(0.5);
+  }
+  
+  .cs-style-6 {
+    figure.cs-hover img {
+      -webkit-transform: translateY(-60px) scale(0.5);
+      -moz-transform: translateY(-60px) scale(0.5);
+      -ms-transform: translateY(-60px) scale(0.5);
+      transform: translateY(-60px) scale(0.5);
+    }
+    figcaption {
+      height: 100%;
+      width: 100%;
+      h3 {
+        margin-top: 55%;
+        color: #fff;
+      }
+      a {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+      }
+    }
+  }
