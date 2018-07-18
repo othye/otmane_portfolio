@@ -1,4 +1,5 @@
- <section class="container">
+
+<section class="container" id="about-content">
 
     <section class="about-me ">  
     
@@ -9,9 +10,10 @@
             </div>
             <div class="about-p">
                 
-                <p class="about-text">I have a strong passion for anything Web related, mostly developping web applications. Equally enjoy working in the back-end and the front-end. Keep scrolling if you want to see more! </p>
-                <!--<p> I'm a creative person, I enjoy being part of a team and i feel conforyable both making decisions and following directions, </p>-->
-                <p>balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla balbla</p>
+                <p class="about-text">I have a strong passion for anything Web related, mostly developping web applications. Equally enjoy working in the back-end and the front-end. </p>
+                <!--<p> I'm a creative person, and who is positive about every aspect of life. </p>-->
+                <p class="about-text">I am seeking the opportunity to apply myself to the  web developper position to capitalize my professional experience. I look for an ideal prospect, and I now desire a fresh challenge with the possibility of career goals and build upon my success.</p>
+                <p class="about-text">If you want to kow more about me keep scrolling!</p>
             </div>
 
         </article>
@@ -23,9 +25,9 @@
             <ul class="grid">
                 <li>
                     <figure class="mySkills">
-                        <img src="{{ asset('img/skills.png') }}" alt="skills">
+                        <img src="{{ asset('img/skills2.png') }}" alt="skills">
                         <figcaption>
-                            <h2>Skills</h2>
+                            <h2>MY SKILLS</h2>
                             <p>Take a look </p>
                             <a href="#popup1"></a>
                         </figcaption>			
@@ -35,7 +37,7 @@
                     <figure class="mySkills">
                         <img src="{{ asset('img/experiences.png') }}" alt="experiences">
                         <figcaption>
-                            <h2>Experiences</h2>  
+                            <h2>WORK EXPERIENCE</h2>  
                             <p>Take a look </p>                                      
                             <a href="#popup2"></a>
                         </figcaption>
@@ -45,7 +47,7 @@
                     <figure class="mySkills">
                         <img src="{{ asset('img/studies.png') }}" alt="studies">
                         <figcaption>
-                            <h2>Studing</h2>      
+                            <h2>EDUCATION</h2>      
                             <p>Take a look </p>                                  
                             <a href="#popup3"></a>
                         </figcaption>
@@ -55,29 +57,14 @@
 
 
             <!-- Popups-->
-            <div id="popup1" class="overlay">
+            <div id="popup1" class="overlay" >
                 <div class="popup">
-                    <h2>Skills</h2>
-                    <a class="close" href="#about">&times;</a>
+                    <h2 class="script text-center"><span>Skills</span></h2>
+                    <a class="close" href="#about-content">&times;</a>
                     <section class="contents">
-                       
-                        <div class="text-center about-skills"> 
-                            <div class="intro-skill ">
-                                <img src="{{ asset('img/desgni-icon.png') }}" alt="" >
-                                <h4>Design</h4>
-                                <p>Photoshop - Illustrator</p>
-                            </div>
-                            <div class="intro-skill">
-                                <img src="{{ asset('img/frontend-icon.png') }}" alt="" >
-                                <h4>Front-end</h4>
-                                <p>HTML5 - CSS - JavaScript</p>             
-                            </div>
-                            <div class="intro-skill">
-                                <img src="{{ asset('img/backend-icon.png') }}" alt=""  >
-                                <h4>Back-end</h4>
-                                <p>PHP - MySQL - APACHE</p>             
-                            </div>
-                        </div>
+                    
+
+                        
                         <div>
                             <table class="table table-hover">
                                 <thead>
@@ -95,7 +82,7 @@
                                         </tr>
                                     {% endfor %}
                                     
-                              </tbody>
+                            </tbody>
                             </table> 
                         </div>
                     </section>
@@ -104,67 +91,69 @@
 
             <div id="popup2" class="overlay">
                 <div class="popup">
-                    <h2>Experiences</h2>
-                    <a class="close" href="#about">&times;</a>
-                    <div class="content">
-                        <div>
-                            <table class="table table-hover">
-                                <thead>
-                                    <tr>
-                                    <th scope="col">Title</th>
-                                    <th scope="col">Company</th>
-                                    <th scope="col">Date</th>
-                                    </tr>
-                                </thead>
-                                <tbody> 
-                                    
-                                    {% for experience in experiences %}  
-                                        <tr class="table-light ">
-                                            <th scope="row">{{ experience.title }}</th>
-                                            <td>{{ experience.company}}</td>
-                                            <td>{{ experience.dateStart}} - {{ experience.dateFinish}}</td>
-                                        </tr>
-                                    {% endfor %}
-                                    
-                              </tbody>
-                            </table> 
-                        </div>
-                    </div>
+                    <h2 class="text-center">Experiences</h2>
+                    <a class="close" href="#about-content">&times;</a>
+                    <section class="contents">
+                        <div id="LineTime">
+                            <div class="row timeline-centered">
+                                <div class="col-md-12 timelineMAIN-title">
+                                    <ul class="timeline timeline-centered">
+                                        {% for experience in experiences %}     
+                                            <li class="timeline-item">
+                                                <div class="timeline-info">
+                                                    <span>{{ experience.dateStart}} - {{ experience.dateFinish}}</span>
+                                                </div>
+                                                <div class="timeline-marker"></div>
+                                                <div class="timeline-content">
+                                                    <h3 class="timeline-title">{{ experience.title }}</h3>
+                                                    <p>{{ experience.company}}</p>
+                                                </div>
+                                            </li>
+                                        {% endfor %}
+                                        <li class="timeline-item period">
+                                            <div class="timeline-marker"></div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>                      
+                    </section>
                 </div>
             </div>
 
             <div id="popup3" class="overlay">
                 <div class="popup">
-                    <h2>Studing</h2>
-                    <a class="close" href="#about">&times;</a>
-                    <div class="content">
-                        <div>
-                            <table class="table table-hover">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">Title</th>
-                                        <th scope="col">School</th>
-                                        <th scope="col">Year</th>
-                                        <th scope="col">Country</th>
-                                    </tr>
-                                </thead>
-                                <tbody> 
-                                    
-                                    {% for study in studies %}  
-                                        <tr class="table-light ">
-                                            <th scope="row">{{ study.title }}</th>
-                                            <td>{{ study.school}}</td>
-                                            <td>{{ study.year}}</td>
-                                            <td>{{ study.country}}</td>
-                                        </tr>
-                                    {% endfor %}
-                                    
-                              </tbody>
-                            </table> 
-                        </div>
-                    </div>
+                    <h2 class="text-center">Studing</h2>
+                    <a class="close" href="#about-content">&times;</a>
+                    <section class="contents">
+                        <div id="LineTime">
+                            <div class="row timeline-centered">
+                                <div class="col-md-12 timelineMAIN-title">
+                                    <ul class="timeline timeline-centered">
+                                        {% for study in studies %}     
+                                            <li class="timeline-item">
+                                                <div class="timeline-info">
+                                                    <span>{{ study.year}}</span>
+                                                </div>
+                                                <div class="timeline-marker"></div>
+                                                <div class="timeline-content">
+                                                    <h3 class="timeline-title">{{ study.title }}</h3>
+                                                    <p>{{ study.school}}</p>
+                                                </div>
+                                            </li>
+                                        {% endfor %}
+                                        <li class="timeline-item period">
+                                            <div class="timeline-marker"></div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>                      
+
+                    </section>
                 </div>
             </div>
+            
         </section>
     </section>
 

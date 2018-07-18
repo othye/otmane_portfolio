@@ -24,9 +24,9 @@ class Portfolio
     /**
      * @var string
      *
-     * @ORM\Column(name="tittle", type="text", length=65535, nullable=false)
+     * @ORM\Column(name="title", type="text", length=65535, nullable=false)
      */
-    private $tittle;
+    private $title;
 
     /**
      * @var string
@@ -43,6 +43,13 @@ class Portfolio
     private $url;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="img", type="string", length=255, nullable=false)
+     */
+    private $img;
+
+    /**
      * @var \Users
      *
      * @ORM\ManyToOne(targetEntity="Users")
@@ -57,14 +64,14 @@ class Portfolio
         return $this->id;
     }
 
-    public function getTittle(): ?string
+    public function getTitle(): ?string
     {
-        return $this->tittle;
+        return $this->title;
     }
 
-    public function setTittle(string $tittle): self
+    public function setTitle(string $title): self
     {
-        $this->tittle = $tittle;
+        $this->title = $title;
 
         return $this;
     }
@@ -89,6 +96,18 @@ class Portfolio
     public function setUrl(string $url): self
     {
         $this->url = $url;
+
+        return $this;
+    }
+
+    public function getImg(): ?string
+    {
+        return $this->img;
+    }
+
+    public function setImg(string $img): self
+    {
+        $this->img = $img;
 
         return $this;
     }

@@ -7,3 +7,19 @@
 @import 'partials/header';
 @import 'partials/about';
 @import 'partials/portfolio';
+@import 'partials/contact';
+@import 'partials/footer';
+
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    background: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    padding: 6px 12px 9px 12px;
+    font-size: 16px;
+    border-radius: 2px;
+    right: 15px;
+    bottom: 15px;
+    transition: background 0.5s;
+}

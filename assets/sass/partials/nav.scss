@@ -13,6 +13,7 @@
 
 nav {
 	font-family: $font_2, $font_3;
+	overflow: none;
 }
 img {
 	vertical-align: baseline;
@@ -220,7 +221,7 @@ img {
 			position: absolute;
 			top: calc(50vh - 22px);
 			left: 15px;
-			width: calc(100% - 30px);
+			width: calc(100% - 20px);
 			padding: 10px 0;
 		}
 		.menu-close-icon {

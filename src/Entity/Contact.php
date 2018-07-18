@@ -38,13 +38,6 @@ class Contact
     /**
      * @var string
      *
-     * @ORM\Column(name="phone_exp", type="string", length=20, nullable=false)
-     */
-    private $phoneExp;
-
-    /**
-     * @var string
-     *
      * @ORM\Column(name="subject", type="text", length=65535, nullable=false)
      */
     private $subject;
@@ -91,18 +84,6 @@ class Contact
     public function setMailExp(string $mailExp): self
     {
         $this->mailExp = $mailExp;
-
-        return $this;
-    }
-
-    public function getPhoneExp(): ?string
-    {
-        return $this->phoneExp;
-    }
-
-    public function setPhoneExp(string $phoneExp): self
-    {
-        $this->phoneExp = $phoneExp;
 
         return $this;
     }

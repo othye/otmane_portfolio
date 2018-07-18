@@ -32,6 +32,33 @@ jQuery(document).ready(function($){
      });
 });
 
+$(document).ready(function(){
+	$('a[href^="#"]').on('click',function (e) {
+	    e.preventDefault();
 
+	    var target = this.hash;
+	    var $target = $(target);
 
+	    $('html, body').stop().animate({
+	        'scrollTop': $target.offset().top
+	    }, 900, 'swing', function () {
+	        window.location.hash = target;
+	    });
+    });
+});
 
+$(document).ready(function(){
+	$(window).scroll(function() {
+		if ($(this).scrollTop() > 100) {
+			$('.back-to-top').fadeIn('slow');
+			$('#header').addClass('header-fixed');
+		} else {
+			$('.back-to-top').fadeOut('slow');
+			$('#header').removeClass('header-fixed');
+		}
+	});
+	$('.back-to-top').click(function(){
+		$('html, body').animate({scrollTop : 0},1500, 'easeInOutExpo');
+		return false;
+	});
+});

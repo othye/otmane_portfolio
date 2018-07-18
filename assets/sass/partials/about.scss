@@ -1,8 +1,7 @@
 //about me 
 
-
 .about-me {
-	margin: 100px 0;
+	padding: 100px 0;
 	word-spacing: 6px;
 }
 .about-h {
@@ -17,19 +16,8 @@
 		text-align: center;
 	}
 }
-.skills {
-	margin-top: 50px;
-}
 
-.about-skills{
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	padding: 20px 0;
-	img {
-		height: 100px;
-	}
-}
+
 .dev-intro {
 	display: flex;
 	justify-content: space-around;
@@ -63,12 +51,16 @@ figure.mySkills {
 	max-height: 250px;
 	background: #000000;
 	text-align: center;
+	border-radius:150px;
+	
 	img {
 		opacity: 1;
 		width: 100%;
 		height: auto;
 		-webkit-transition: opacity 0.35s;
 		transition: opacity 0.35s;
+
+		
 	}
 	figcaption {
 		position: absolute;
@@ -82,8 +74,8 @@ figure.mySkills {
 			right: 30px;
 			bottom: 50%;
 			left: 30px;
-			border-top: 1px solid $white_80;
-			border-bottom: 1px solid $white_80;
+			border-top: 1.5px solid $white_80;
+			border-bottom: 1.5px solid $white_80;
 			content: '';
 			opacity: 0;
 			background-color: $white;
@@ -166,9 +158,12 @@ figure.mySkills {
 	transition: opacity 500ms;
 	visibility: hidden;
 	opacity: 0;
+	z-index: 10;
 	&:target {
 		visibility: visible;
 		opacity: 1;
+		overflow: auto;
+		 max-width: 100vw;
 	}
 }
 .popup {
@@ -179,11 +174,13 @@ figure.mySkills {
 	width: 60%;
 	height: 90%;
 	position: relative;
+	
 	transition: all 5s ease-in-out;
 	h2 {
 		margin-top: 0;
 		color: $grey1;
 	}
+	
 	.close {
 		position: absolute;
 		top: 20px;
@@ -194,7 +191,7 @@ figure.mySkills {
 		text-decoration: none;
 		color: $grey1;
 		&:hover {
-			color: $green;
+			color: $red;
 		}
 	}
 	.contents {
@@ -214,9 +211,10 @@ figure.mySkills {
 	.about-p {
 		padding: 20px 0;
 		font-weight: 3px;
-		font-size: 4.5vw;
+		font-size: 4vw;
 		.about-text{
 			text-align: left;
+			font-size: 3vw;
 		}
 	}
 
@@ -263,7 +261,7 @@ figure.mySkills {
 		}
 
 		p{
-			font-size: 20px;
+			font-size: 15px;
 		}
 	}
 	table{
@@ -303,3 +301,194 @@ figure.mySkills {
 		}
 	}
 }
+
+
+/*==================================
+    TIMELINE
+==================================*/
+/*-- GENERAL STYLES
+------------------------------*/
+#LineTime{
+	margin-top: 50px;
+}
+
+.timeline {
+	line-height: 1.4em;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+
+	h3 {
+		line-height: inherit;
+		font-size: 20px;
+		margin-top: 0px;
+	}
+	p{
+		padding-bottom: 30px;
+		font-size: 15px;
+		color: $grey1;
+	}
+}
+	
+	/*----- TIMELINE ITEM -----*/
+.timeline-item {
+	padding-left: 40px;
+	position: relative;
+}
+.timeline-item:last-child {
+	padding-bottom: 0;
+}
+	
+	/*----- TIMELINE INFO -----*/
+.timeline-info {
+	font-size: 12px;
+	font-weight: 350;
+	letter-spacing: 3px;
+	margin: 0 0 .5em 0;
+	text-transform: uppercase;
+	white-space: nowrap;
+	color: #768390;
+}
+	
+/*----- TIMELINE MARKER -----*/
+
+.timeline-marker {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 15px;
+}
+.timeline-marker:before {
+	background: #4AA6C7;
+	border: 3px solid transparent;
+	border-radius: 100%;
+	content: "";
+	display: block;
+	height: 15px;
+	position: absolute;
+	top: 4px;
+	left: 0;
+	width: 15px;
+	transition: background 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+.timeline-marker:after {
+	content: "";
+	width: 3px;
+	background: #CCD5DB;
+	display: block;
+	position: absolute;
+	top: 24px;
+	bottom: 0;
+	left: 6px;
+}
+.timeline-item:last-child .timeline-marker:after {
+	content: none;
+}
+  
+.timeline-item:not(.period):hover .timeline-marker:before {
+	background: transparent;
+	border: 3px solid #4AA6C7;
+}
+  
+/*----- TIMELINE CONTENT -----*/
+.timeline-content {
+	padding-bottom: 40px;
+}
+.timeline-content p:last-child {
+	margin-bottom: 0;
+}
+
+/*----- TIMELINE PERIOD -----*/
+.period {
+	padding: 0;
+}
+.period .timeline-info {
+	display: none;
+}
+.period .timeline-marker:before {
+	background: transparent;
+	content: "";
+	width: 15px;
+	height: auto;
+	border: none;
+	border-radius: 0;
+	top: 0;
+	bottom: 30px;
+	position: absolute;
+	border-top: 3px solid #CCD5DB;
+}
+.period .timeline-marker:after {
+	content: "";
+	height: 32px;
+	top: auto;
+}
+.period .timeline-content {
+	padding: 40px 0 70px;
+}
+.period .timeline-title {
+	margin: 0;
+}
+  
+  /*----------------------------------------------
+		  MOD: TIMELINE CENTERED
+	  ----------------------------------------------*/
+@media (min-width: 992px) {
+	.timeline-centered, .timeline-centered .timeline-item, .timeline-centered .timeline-info, .timeline-centered .timeline-marker, .timeline-centered .timeline-content {
+	  	display: block;
+	  	margin: 0;
+	  	padding: 0;
+	}
+	.timeline-centered .timeline-item {
+	  	padding-bottom: 40px;
+	  	overflow: hidden;
+	}
+	.timeline-centered .timeline-marker {
+	  	//position: absolute;
+	  	left: 50%;
+	  	margin-left: -7.5px;
+	}
+	.timeline-centered .timeline-info,
+	.timeline-centered .timeline-content {
+	  	width: 50%;
+	}
+	.timeline-centered > .timeline-item:nth-child(odd) .timeline-info {
+	  	float: left;
+	  	text-align: right;
+	  	padding-right: 30px;
+	}
+	.timeline-centered > .timeline-item:nth-child(odd) .timeline-content {
+	  	float: right;
+	  	text-align: left;
+	  	padding-left: 30px;
+	}
+	.timeline-centered > .timeline-item:nth-child(even) .timeline-info {
+	  	float: right;
+	  	text-align: left;
+	  	padding-left: 30px;
+	}
+	.timeline-centered > .timeline-item:nth-child(even) .timeline-content {
+	  	float: left;
+	  	text-align: right;
+	  	padding-right: 30px;
+	}
+	.timeline-centered > .timeline-item.period .timeline-content {
+	  	float: none;
+	  	padding: 0;
+	  	width: 100%;
+	  	text-align: center;
+	}
+	.timeline-centered .timeline-item.period {
+	  padding: 50px 0 90px;
+	}
+	.timeline-centered .period .timeline-marker:after {
+	  	height: 30px;
+	  	bottom: 0;
+	  	top: auto;
+	}
+	.timeline-centered .period .timeline-title {
+	  	left: auto;
+	}
+}
+  

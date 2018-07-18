@@ -26,6 +26,7 @@ class PortfolioController extends Controller
             'skills' => $this->getSkills(),
             'experiences' => $this->getExperiences(),
             'studies' => $this->getStudies(),
+            'folios' => $this->getFolios(),
         ]);
     }
 
@@ -74,4 +75,22 @@ class PortfolioController extends Controller
         return $studies;
     }
 
+    /**
+     * Return Folio
+     *
+     * @return void
+     */
+
+    private function getFolios(){
+        $folios = $this->getDoctrine()
+            ->getRepository(Portfolio::class)
+            ->findBy(array(), array('id' => 'desc'));
+
+
+        return $folios;
+    }
+
+    /**
+     * @Route("/contact", name="contact")
+    */
 }
