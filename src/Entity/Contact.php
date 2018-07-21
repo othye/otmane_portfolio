@@ -49,16 +49,6 @@ class Contact
      */
     private $message;
 
-    /**
-     * @var \Users
-     *
-     * @ORM\ManyToOne(targetEntity="Users")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="id_user", referencedColumnName="id")
-     * })
-     */
-    private $idUser;
-
     public function getId(): ?int
     {
         return $this->id;
@@ -108,18 +98,6 @@ class Contact
     public function setMessage(string $message): self
     {
         $this->message = $message;
-
-        return $this;
-    }
-
-    public function getIdUser(): ?Users
-    {
-        return $this->idUser;
-    }
-
-    public function setIdUser(?Users $idUser): self
-    {
-        $this->idUser = $idUser;
 
         return $this;
     }

@@ -171,6 +171,8 @@ img {
 	.social ul {
 		padding: 80px 15px 30px;
 		margin: 0;
+		display: flex;
+		justify-content: center !important;
 	}
 }
 @media screen and(min-width: 992px) {

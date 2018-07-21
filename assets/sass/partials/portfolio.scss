@@ -25,19 +25,19 @@
 
 
 .details {
-    font-family: 'Lato', Arial, sans-serif;
     position: relative;
     display: inline-block;
     overflow: hidden;
     margin: 8px;
-    min-width: 250px;
-    max-width: 310px;
+    min-width: 300px;
+    max-width: 400px;
     width: 100%;
     background-color: #000000;
     color: #ffffff;
     text-align: left;
     font-size: 16px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    margin: 0 20px;
 }
 .details * {
     -webkit-transition: all 0.35s;
@@ -46,8 +46,9 @@
     box-sizing: border-box;
 }
 .details img {
-    max-width: 100%;
+    max-width: 105%;
     vertical-align: top;
+
 }
 .details figcaption {
     position: absolute;
@@ -86,4 +87,12 @@
 .details:hover figcaption,
 .details.hover figcaption {
     height: calc(85%);
+}
+
+@media only screen and (max-width: 900px) {
+    .details {
+        min-width: 200px;
+        max-width: 250px;
+    }
+
 }
