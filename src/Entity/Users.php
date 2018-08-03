@@ -80,6 +80,13 @@ class Users
     /**
      * @var string
      *
+     * @ORM\Column(name="password", type="string", length=255, nullable=false)
+     */
+    private $password;
+
+    /**
+     * @var string
+     *
      * @ORM\Column(name="more_infos", type="text", length=65535, nullable=false)
      */
     private $moreInfos;
@@ -181,6 +188,18 @@ class Users
     public function setMail(string $mail): self
     {
         $this->mail = $mail;
+
+        return $this;
+    }
+
+    public function getPassword(): ?string
+    {
+        return $this->password;
+    }
+
+    public function setPassword(string $password): self
+    {
+        $this->password = $password;
 
         return $this;
     }

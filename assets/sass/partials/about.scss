@@ -1,10 +1,18 @@
 //about me 
 
+.my-title {
+	text-align: center;
+	overflow: hidden;
+	margin-bottom: 1.3em;
+	margin-top: 15px;
+	float: left;
+}
+  
 .about-me {
-	padding: 100px 0;
+	padding: 20px 0;
 	word-spacing: 6px;
 }
-.about-h {
+.about-title {
 	font-weight: bold;
 }
 
@@ -17,17 +25,15 @@
 	}
 }
 
-
 .dev-intro {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
 }
 
-
  // Skills
 .grid {
-	padding: 20px 20px 50px 20px;
+	padding: 20px 20px 20px 20px;
 	margin: 0 auto;
 	list-style: none;
 	text-align: center;
@@ -52,15 +58,14 @@ figure.mySkills {
 	background: #000000;
 	text-align: center;
 	border-radius:150px;
+	box-shadow: 1px 1px 12px #555;
 	
 	img {
-		opacity: 1;
+		opacity: 1; 
 		width: 100%;
 		height: auto;
 		-webkit-transition: opacity 0.35s;
 		transition: opacity 0.35s;
-
-		
 	}
 	figcaption {
 		position: absolute;
@@ -81,8 +86,8 @@ figure.mySkills {
 			background-color: $white;
 			-webkit-transition: all 0.4s;
 			transition: all 0.4s;
-			-webkit-transition-delay: 0.6s;
-			transition-delay: 0.6s;
+			-webkit-transition-delay: 0.4s;
+			transition-delay: 0.4s;
 		}
 	}
 	h2{
@@ -131,8 +136,8 @@ figure.mySkills {
 			}
 			p{
 				opacity: 0.9;
-				-webkit-transition-delay: 0.6s;
-				transition-delay: 0.6s;
+				-webkit-transition-delay: 0.4s;
+				transition-delay: 0.4s;
 			}
 			&::before {
 				background: $transWhite;
@@ -171,11 +176,11 @@ figure.mySkills {
 	padding: 20px;
 	background: $white;
 	border-radius: 5px;
-	width: 60%;
-	height: 90%;
+	width: 70vw;
+	height: 90vh;
 	position: relative;
-	
-	transition: all 5s ease-in-out;
+	transition: all 200ms ease-in-out;
+		
 	h2 {
 		margin-top: 0;
 		color: $grey1;
@@ -200,12 +205,41 @@ figure.mySkills {
 	}
 }
 
+//Display Skills
+
+.skills-row {
+	padding-bottom: 50px;
+	padding-top: 50px;
+  
+}
+
+ul.skills {
+	padding: 5px;
+	color: rgb(84, 84, 84);
+	font-weight: 200;
+	list-style: none;
+}
+
+.askill{
+  font-size:17px;
+  padding:3px;
+}
+
+.skill-header {
+	font-size: 15px;
+	color: white;
+	background: $gray;
+	padding: 5px 10px 5px 10px;
+	border-radius: 2px;
+	margin-bottom: 10px;
+	font-weight: 500;
+}
 
 //media 
 @media screen and (max-width: 992px) {
 
-	.about-h {
-		font-size: 6vw;
+	.about-title {
+		font-size: 5vw;
 	}
 	
 	.about-p {
@@ -214,7 +248,6 @@ figure.mySkills {
 		font-size: 4vw;
 		.about-text{
 			text-align: left;
-			font-size: 3vw;
 		}
 	}
 
@@ -237,9 +270,11 @@ figure.mySkills {
 	}
 
 	.popup {
-		width: 100%;
-		height: 90%;
+		width: 100vw;
+		height: 90vh;
+		
 	}
+	
 	.contents {
 		max-height: 95%;
 	}
@@ -264,14 +299,7 @@ figure.mySkills {
 			font-size: 15px;
 		}
 	}
-	table{
-		thead{
-			font-size: 25px;
-		}
-		tbody{
-			font-size: 20px;
-		}
-	}
+	
 }
 
 @media screen and (max-width: 600px) {
@@ -310,23 +338,25 @@ figure.mySkills {
 ------------------------------*/
 #LineTime{
 	margin-top: 50px;
+	overflow-x: hidden;
 }
 
 .timeline {
-	line-height: 1.4em;
+	line-height: 1.2em;
 	list-style: none;
 	margin: 0;
 	padding: 0;
 	width: 100%;
+	
 
 	h3 {
 		line-height: inherit;
-		font-size: 20px;
+		font-size: 15px;
 		margin-top: 0px;
 	}
 	p{
 		padding-bottom: 30px;
-		font-size: 15px;
+		font-size: 13px;
 		color: $grey1;
 	}
 }
@@ -431,9 +461,9 @@ figure.mySkills {
 	margin: 0;
 }
   
-  /*----------------------------------------------
-		  MOD: TIMELINE CENTERED
-	  ----------------------------------------------*/
+/*----------------------------------------------
+		MOD: TIMELINE CENTERED
+----------------------------------------------*/
 @media (min-width: 992px) {
 	.timeline-centered, .timeline-centered .timeline-item, .timeline-centered .timeline-info, .timeline-centered .timeline-marker, .timeline-centered .timeline-content {
 	  	display: block;
@@ -488,7 +518,96 @@ figure.mySkills {
 	  	top: auto;
 	}
 	.timeline-centered .period .timeline-title {
-	  	left: auto;
+		  left: auto;
+	}
+	.timeline {
+		line-height: 1.4em;
+		
+		h3 {			
+			font-size: 20px;
+		}
+		p{
+			font-size: 15px;
+		}
+	}
+		
+}
+
+/*----------------------------------------------
+		Download Button
+----------------------------------------------*/
+.cv-download{
+	margin-bottom: 20px;
+	padding-top:15px;
+	border-top:2px $black solid;
+}
+
+.btn-download {
+    position: relative;
+    display: inline-block;
+    height: 50px;
+    width: 200px;
+    line-height: 50px;
+    padding: 0;
+    border-radius: 50px;
+    background: #fdfdfd;
+    border: 2px solid #4c4c4d;
+    margin: 10px;
+	transition: .5s;
+	border: 2px solid $dkgray;
+
+	span.circle-d {
+		display: block;
+		background-color:  $dkgray;
+		color: $white;
+		position: absolute;
+		float: left;
+		margin: 5px;
+		line-height: 42px;
+		height: 40px;
+		width: 40px;
+		top: 0;
+		left: 0;
+		transition: .5s;
+		border-radius: 50%;
+	}
+	span.d-hover{
+		left: 80px;
+		opacity: 0;
+	}
+	
+	
+}
+
+.btn-download:hover {
+	background-color: $dkgray;
+	
+	span.circle-d {
+		left: 100%;
+		margin-left: -45px;
+		background-color: #fdfdfd;
+		color:  $dkgray;
+	}
+	span.title-d{
+		left: 40px;
+		opacity: 0;
+	}
+	span.d-hover {
+		opacity: 1;
+		left: 40px;
+		color: $white;
 	}
 }
-  
+
+.btn-download span.title-d,
+.btn-download span.d-hover{
+    position: absolute;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 16px;
+    font-weight: bold;
+    color:  $dkgray;
+    left: 80px;
+    transition: .5s;
+}
+

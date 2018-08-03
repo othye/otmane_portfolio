@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Courgette');
 @import url('https://fonts.googleapis.com/css?family=Acme');
+@import '~admin-lte/bower_components/font-awesome/css/font-awesome.min.css';
+@import '~admin-lte/bower_components/Ionicons/css/ionicons.min.css';
 
 @import 'variables';
 @import "~bootstrap/scss/bootstrap";
@@ -22,4 +24,12 @@
     right: 15px;
     bottom: 15px;
     transition: background 0.5s;
+}
+
+.hidden {
+    opacity: 0;
+  }
+  
+.visible {
+    opacity: 1;
 }

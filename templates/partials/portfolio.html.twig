@@ -1,11 +1,13 @@
 <section class="portfolio" id="portfolio">
-
-    <h2 class="port text-center">PORTFOLIO.</h2>
-    <div class=" text-center">
+    <div class="container text-center">
+    
+        <div class="port my-title">
+            <h2 class="port text-center">PORTFOLIO.</h2>
+        </div>
 
         <section class="list">
             {% for folio in folios %} 
-                <figure class="details"><img src="{{ asset('img/') }}{{ folio.img }}.png" alt="portfolio image"/>
+                <figure class="details"><img src="{{ asset('build/images/folio/') }}{{ folio.img }}.png" alt="portfolio image"/>
                     <figcaption>
                         <h3>{{ folio.title }}</h3>
                         <blockquote>

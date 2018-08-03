@@ -1,12 +1,16 @@
 
-<section class="container" id="about-content">
+<section class="container" id="about">
 
-    <section class="about-me ">  
     
+    <section class="about-me ">  
+        <!--<div class="my-title">
+            <h2>About Me</h2>
+        </div>-->
         <!-- About me -->
-        <article  class="about" id="about">
-            <div class="about-h">
-                <h3 class="text-center about-title">HI THERE !</h3>
+        
+        <article  class="about" >
+            <div class="about-title">
+                <h3 class="text-center">HI THERE !</h3>
             </div>
             <div class="about-p">
                 
@@ -25,7 +29,7 @@
             <ul class="grid">
                 <li>
                     <figure class="mySkills">
-                        <img src="{{ asset('img/skills2.png') }}" alt="skills">
+                        <img src="{{ asset('build/images/skills2.png') }}" alt="skills">
                         <figcaption>
                             <h2>MY SKILLS</h2>
                             <p>Take a look </p>
@@ -35,9 +39,9 @@
                 </li>
                 <li>
                     <figure class="mySkills">
-                        <img src="{{ asset('img/experiences.png') }}" alt="experiences">
+                        <img src="{{ asset('build/images/experiences.png') }}" alt="experiences">
                         <figcaption>
-                            <h2>WORK EXPERIENCE</h2>  
+                            <h2>EXPERIENCE</h2>  
                             <p>Take a look </p>                                      
                             <a href="#popup2"></a>
                         </figcaption>
@@ -45,7 +49,7 @@
                 </li>
                 <li>
                     <figure class="mySkills">
-                        <img src="{{ asset('img/studies.png') }}" alt="studies">
+                        <img src="{{ asset('build/images/studies.png') }}" alt="studies">
                         <figcaption>
                             <h2>EDUCATION</h2>      
                             <p>Take a look </p>                                  
@@ -55,31 +59,27 @@
                 </li>
             </ul>
 
-
+        </section>
             <!-- Popups-->
             <div id="popup1" class="overlay" >
                 <div class="popup">
-                    <h2 class="script text-center"><span>Skills</span></h2>
-                    <a class="close" href="#about-content">&times;</a>
+                    <div class="head-pop">
+                        <h2 class="script text-center"><span>Skills</span></h2>
+                        <a class="close" href="#about">&times;</a>
+                    </div>
                     <section class="contents">
                     
-
-                        
+                        <div class="row skills-row ">
+                            {% for skill in skills %}
+                                <div class="col-sm-2 col-sm-offset-2 skill-list">
+                                    <h3 class="skill-header">{{ skill.title }}</h3>
+                                    <ul class="skills">
+                                        <li class="askill">{{ skill.skills|nl2br}}</li>
+                                    </ul>
+                                </div>
+                            {% endfor %}
                         <div>
-                            <table class="table table-hover">
-                                
-                                <tbody> 
-                                    
-                                    {% for skill in skills %}  
-                                        <tr class="table-light ">
-                                            <th scope="row">{{ skill.title }}</th>
-                                            <td>{{ skill.skills}}</td>
-                                        </tr>
-                                    {% endfor %}
-                                    
-                                </tbody>
-                            </table> 
-                        </div>
+
                     </section>
                 </div>
             </div>
@@ -87,7 +87,7 @@
             <div id="popup2" class="overlay">
                 <div class="popup">
                     <h2 class="text-center">Experiences</h2>
-                    <a class="close" href="#about-content">&times;</a>
+                    <a class="close" href="#about">&times;</a>
                     <section class="contents">
                         <div id="LineTime">
                             <div class="row timeline-centered">
@@ -119,7 +119,7 @@
             <div id="popup3" class="overlay">
                 <div class="popup">
                     <h2 class="text-center">Studing</h2>
-                    <a class="close" href="#about-content">&times;</a>
+                    <a class="close" href="#about">&times;</a>
                     <section class="contents">
                         <div id="LineTime">
                             <div class="row timeline-centered">
@@ -150,6 +150,15 @@
             </div>
             
         </section>
+    </section>
+
+    <section class="cv-download container text-center">
+        <h3>MY FULL Resume </h3>
+        <a href="{{ asset('files/otmane-CV.pdf') }}" class="btn-download" target="_blank">
+            <span class="circle-d"><i class="fa fa-download"></i></span>
+            <span class="title-d">Download</span>
+            <span class="d-hover">Click here</span>
+        </a>
     </section>
 
 </section>

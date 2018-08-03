@@ -1,19 +1,26 @@
+<!--  Portfolio Otmane V-0.1-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     {% block metas %}
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-        <meta name="description" content="Carte des Bornes de Recharge pour Véhicules Électriques ">
-        <meta name="author" content="Stacy-Otmane-Maxime-Arnaud">
-        <link rel="icon" href="assets/img/logo.png" type="image/png" sizes="16x16"> 
+        <meta name="description" content="Portfolio Otmane ">
+        <meta name="author" content="Otmane E-ziani">
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('build/images/favicon/apple-touch-icon.png') }}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('build/images/favicon/favicon-32x32.png') }}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('build/images/favicon/favicon-16x16.png') }}">
+        <link rel="manifest" href="{{ asset('build/images/favicon/site.webmanifest') }}">
+        <link rel="mask-icon" href="{{ asset('build/images/favicon/safari-pinned-tab.svg') }}" color="#126b85">
+        <meta name="msapplication-TileColor" content="#2b5797">
+        <meta name="theme-color" content="#ffffff">
     {% endblock %}
     
     <title>{% block title %}Otmane Portfolio!{% endblock %}</title>
 
     {% block stylesheets %}
         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-        <link rel="stylesheet" href="{{ asset('build/app.css') }}">
+        <link rel="stylesheet" href="{{ asset('build/css/app.css') }}">
     {% endblock %}
 
 </head>
@@ -23,7 +30,7 @@
         {% block content %} {% endblock %}
     
         {% block javascripts %}
-            <script src="{{ asset('build/app.js') }}"></script>
+            <script src="{{ asset('build/js/app.js') }}"></script>
         {% endblock %}
     </body>
 </html>

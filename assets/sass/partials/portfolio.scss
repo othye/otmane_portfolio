@@ -1,28 +1,25 @@
 #portfolio {
-    background: url('../img/bg-po.png');
+    background: url('../img/arabesque.png');
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    display: table;
-    position: relative;
     width: 100%;
     z-index: 1;
     
 }
   
 .port {
-    padding: 30px;
+    padding: 10px;
     color: $white;
-
 }
-  
+
+
 /* Common style */
 .list {
     display: inline-block;
     margin-bottom: 20px;
 }
-
 
 .details {
     position: relative;
@@ -38,51 +35,51 @@
     font-size: 16px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
     margin: 0 20px;
-}
-.details * {
-    -webkit-transition: all 0.35s;
-    transition: all 0.35s;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-.details img {
-    max-width: 105%;
-    vertical-align: top;
-
-}
-.details figcaption {
-    position: absolute;
-    height: 75px;
-    left: 15px;
-    right: 15px;
-    bottom: 15px;
-    overflow: hidden;
-    padding: 15px;
-    background-color: rgba(0, 0, 0, 0.75);
-}
-.details h3 {
-    text-transform: uppercase;
-    font-size: 20px;
-    font-style: bold;
-    word-spacing: 8px;
-    font-weight: 400;
-    line-height: 24px;
-    margin: 3px 0;
-    padding: 13px 0;
-    text-decoration: underline
-}
-.details blockquote {
-    padding: 0;
-    margin: 0;
-    font-style: italic;
-    font-size: 1em;
-}
-.details a {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    
+    * {
+        -webkit-transition: all 0.35s;
+        transition: all 0.35s;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    img {
+        max-width: 105%;
+        vertical-align: top;
+    }
+    figcaption {
+        position: absolute;
+        height: 75px;
+        left: 15px;
+        right: 15px;
+        bottom: 15px;
+        overflow: hidden;
+        padding: 15px;
+        background-color: rgba(0, 0, 0, 0.75);
+    }
+    h3 {
+        text-transform: uppercase;
+        font-size: 20px;
+        font-style: bold;
+        word-spacing: 8px;
+        font-weight: 400;
+        line-height: 24px;
+        margin: 3px 0;
+        padding: 13px 0;
+        text-decoration: underline
+    }
+    blockquote {
+        padding: 0;
+        margin: 0;
+        font-style: italic;
+        font-size: 1em;
+    }
+    a {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
 }
 .details:hover figcaption,
 .details.hover figcaption {
@@ -93,6 +90,17 @@
     .details {
         min-width: 200px;
         max-width: 250px;
+        h3{
+            font-size: 15px;
+            font-style: bold;
+            word-spacing: 4px;
+            font-weight: 200;
+            line-height: 14px;
+            margin: 17px 0 0 0;
+        }
     }
 
+    .port h2{
+        font-size: 20px 
+    }
 }

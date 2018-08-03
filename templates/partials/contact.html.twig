@@ -1,5 +1,8 @@
 <section id="contact" class="container text-center">
-    <h2 class="form-title ">Get In Touch.</h2>
+    <div class="port my-title">
+        <h2 class="form-title ">Get In Touch.</h2>
+    </div>
+    
     <div class="info text-center">
 
         <div class="infos">
@@ -49,8 +52,33 @@
                     <button type="submit" class="btn btn-mod btn-border btn-large">Send Message</button>
                 </div>
 
-            </form> End form -->
+            </form> End form-->
+            {# 
+            {% if app.flashes.has('success') %}
+                <div class="alert alert-success" role="alert">
+                    {% for message in app.flashes('success') %}
+                        <div class="flash-notice">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}#}
 
+            {% set flashbag = app.session.flashbag.all %}
+            {% if flashbag|length > 0 %}
+                {% for key, message in flashbag %}
+                    <div class="alert alert-{{ key }}" role="alert">
+                        <div class="flash-message">
+                            {% for text in message %}
+                                {{ text }}
+                            {% endfor %}
+                                
+                        </div>
+                        
+                    </div>
+                {% endfor %}
+            {% endif %}
+                
              {{ form_start(form) }}
                 
                 <div class="form-group">

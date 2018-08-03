@@ -1,5 +1,12 @@
 require('../sass/main.scss');
 require('../js/modernizr-custom');
+const $ = require('admin-lte/bower_components/jquery/dist/jquery.min');
+const jQuery = $;
+const boostrap = require('admin-lte/bower_components/bootstrap/dist/js/bootstrap.min');
+require('admin-lte/dist/js/adminlte.js');
+
+window.$ = $;
+window.jQuery = $;
 
 (function($) {
     'use strict';
@@ -18,7 +25,7 @@ require('../js/modernizr-custom');
 jQuery(document).ready(function($){
   // Defining a function to fullscreen size for #header 
 	function fullscreen(){
-		jQuery('#header').css({
+		jQuery('#home').css({
 			width: jQuery(window).width(),
 			height: jQuery(window).height(),
 		});
@@ -51,10 +58,10 @@ $(document).ready(function(){
 	$(window).scroll(function() {
 		if ($(this).scrollTop() > 100) {
 			$('.back-to-top').fadeIn('slow');
-			$('#header').addClass('header-fixed');
+			$('#home').addClass('header-fixed');
 		} else {
 			$('.back-to-top').fadeOut('slow');
-			$('#header').removeClass('header-fixed');
+			$('#home').removeClass('header-fixed');
 		}
 	});
 	$('.back-to-top').click(function(){
@@ -62,3 +69,13 @@ $(document).ready(function(){
 		return false;
 	});
 });
+
+
+// Anim scrolling
+$(document).ready(function(){
+
+	jQuery('.post').addClass("hidden").viewportChecker({
+		classToAdd: 'visible animated fadeIn', // Class to add to the elements when they are visible
+		offset: 100
+	});
+});	
